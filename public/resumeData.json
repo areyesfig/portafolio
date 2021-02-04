@@ -1,0 +1,114 @@
+{
+  "main": {
+    "name": "Alvaro Reyes",
+    "occupation": "Software Developer",
+    "description": "I'm a android developer and web developer in process...",
+    "image": "profilepic.jpg",
+    "bio": "Hi there! I am Alvaro! , I've been coding for over 2 years now. As a mobile developer I've worked both with startup corporations to help build & scale their companie. Currently in my work I work as an android developer, creating new mobile solutions for national companies of different directions.Despite the short time I have been in this world of programming, I think I have found a profession in which I am motivated every day to study and practice to try to improve more and more and thus contribute in a better way to my work. ",
+    "contactmessage": "Get in touch with me to collaborate with your bussines!",
+    "email": "areyes.088@gmail.com",
+    "phone": "+569 42684500",
+    "address": {
+      "street": "Monjitas 744",
+      "city": "Santiago",
+      "state": "R. M",
+      "zip": ""
+    },
+    "website": "",
+    "resumedownload": "",
+    "social": [
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/areyesfigue",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "instagram",
+        "url": "https://www.instagram.com/4lvaroreys/",
+        "className": "fa fa-instagram"
+      },
+      {
+        "name": "github",
+        "url": "https://github.com/areyesfig",
+        "className": "fa fa-github"
+      }
+    ]
+  },
+  "resume": {
+    "skillmessage": "My Programming Language Proficiency",
+    "education": [
+      {
+        "school": "Instituto Duoc Uc",
+        "degree": "Analista Programador",
+        "graduated": "2019",
+        "description": ""
+      }
+    ],
+    "work": [
+      {
+        "company": "Andes - Tech",
+        "title": "Software Developer",
+        "years": "March 2019 - Present",
+        "description": "develop mobile applications in native android, support AMS web application and ObjectScript cache backend."
+      }
+    ],
+    "skills": [
+      {
+        "name": "ReactJs",
+        "level": "70%"
+      },
+      {
+        "name": "Python",
+        "level": "50%"
+      },
+      {
+        "name": "Git",
+        "level": "80%"
+      },
+      {
+        "name": "JavaScript",
+        "level": "80%"
+      },
+      {
+        "name": "Web Development",
+        "level": "70%"
+      },
+      {
+        "name": "Java",
+        "level": "80%"
+      },
+      {
+        "name": "Mobile Development",
+        "level": "90%"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Prueba 1",
+        "category": "",
+        "image": "",
+        "url": ""
+      },
+      {
+        "title": "Prueba 2",
+        "category": "",
+        "image": "",
+        "url": ""
+      }
+    ]
+  },
+  "testimonials": {
+    "testimonials": [
+      {
+        "text": "",
+        "user": ""
+      },
+      {
+        "text": "",
+        "user": ""
+      }
+    ]
+  }
+}
