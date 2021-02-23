@@ -1,13 +1,13 @@
 {
   "main": {
     "name": "Alvaro Reyes",
-    "occupation": "Software Developer",
-    "description": "I'm a android developer and web developer in process...",
+    "occupation": "Junior Software Developer",
+    "description": "I'm a android developer native & working everyday for become front end developer...",
     "image": "profilepic.jpg",
     "bio": "Hi there! I am Alvaro! , I've been coding for over 2 years now. As a mobile developer I've worked both with startup corporations to help build & scale their companie. Currently in my work I work as an android developer, creating new mobile solutions for national companies of different directions.Despite the short time I have been in this world of programming, I think I have found a profession in which I am motivated every day to study and practice to try to improve more and more and thus contribute in a better way to my work. ",
-    "contactmessage": "Get in touch with me to collaborate with your bussines!",
+    "contactmessage": "Get in touch with me to collaborate with you!",
     "email": "areyes.088@gmail.com",
-    "phone": "+569 42684500",
+    "phone": "",
     "address": {
       "street": "Monjitas 744",
       "city": "Santiago",
@@ -15,7 +15,7 @@
       "zip": ""
     },
     "website": "",
-    "resumedownload": "",
+    "resumedownload": "https://github.com/areyesfig/Resume/raw/main/cv_AlvaroReyes.pdf",
     "social": [
       {
         "name": "linkedin",
@@ -49,7 +49,7 @@
         "company": "Andes - Tech",
         "title": "Software Developer",
         "years": "March 2019 - Present",
-        "description": "develop mobile applications in native android, support AMS web application and ObjectScript cache backend."
+        "description": "Junior software developer , i have created  movile applications in android. Also, i give support to plataform AMS website , all this with ObjectScript language in backend."
       }
     ],
     "skills": [
@@ -86,13 +86,13 @@
   "portfolio": {
     "projects": [
       {
-        "title": "Prueba 1",
+        "title": "En construcción",
         "category": "",
         "image": "",
         "url": ""
       },
       {
-        "title": "Prueba 2",
+        "title": "En construcción",
         "category": "",
         "image": "",
         "url": ""
