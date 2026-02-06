@@ -3,3 +3,26 @@
   border-radius: 5px;
   padding: 20px;
 }
+
+/* Nav visibility (reemplaza jQuery fade) */
+#nav-wrap.nav-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+#nav-wrap {
+  transition: opacity 0.2s ease;
+}
+
+/* FitText alternativo con CSS (reemplaza jQuery fitText) */
+.responsive-headline {
+  font-size: clamp(2.5rem, 8vw, 5.5rem) !important;
+}
+
+/* Portfolio placeholder cuando no hay URL */
+.portfolio-placeholder {
+  display: block;
+  cursor: default;
+  position: relative;
+}

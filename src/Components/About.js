@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const About = ({ data }) => {
   if (data) {
@@ -21,7 +22,7 @@ const About = ({ data }) => {
           <img
             className="profile-pic"
             src={profilepic}
-            alt="Alvaro's Profile Pic"
+            alt="Alvaro Reyes - Perfil"
           />
         </div>
         <div className="nine columns main-col">
@@ -57,6 +58,23 @@ const About = ({ data }) => {
       </div>
     </section>
   );
+};
+
+About.propTypes = {
+  data: PropTypes.shape({
+    name: PropTypes.string,
+    image: PropTypes.string,
+    bio: PropTypes.string,
+    address: PropTypes.shape({
+      street: PropTypes.string,
+      city: PropTypes.string,
+      state: PropTypes.string,
+      zip: PropTypes.string,
+    }),
+    phone: PropTypes.string,
+    email: PropTypes.string,
+    resumedownload: PropTypes.string,
+  }),
 };
 
 export default About;

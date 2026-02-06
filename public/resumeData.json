@@ -1,17 +1,17 @@
 {
   "main": {
-    "name": "Alvaro Reyes",
-    "occupation": "Junior Software Developer",
-    "description": "I'm a android developer native & working everyday for become front end developer...",
-    "image": "profilepic.jpg",
-    "bio": "Hi there! I am Alvaro! , I've been coding for over 2 years now. As a mobile developer I've worked both with startup corporations to help build & scale their companie. Currently in my work I work as an android developer, creating new mobile solutions for national companies of different directions.Despite the short time I have been in this world of programming, I think I have found a profession in which I am motivated every day to study and practice to try to improve more and more and thus contribute in a better way to my work. ",
+    "name": "Alvaro Reyes Figueroa",
+    "occupation": "Senior Software Developer",
+    "description": "Software Developer with 6+ years of experience building customer-focused technology solutions for banking and corporate sectors. Skilled in hybrid mobile app development, microservices, and ETL projects.",
+    "image": "profilepic.png",
+    "bio": "Software Developer with 6+ years of experience building customer-focused technology solutions for banking and corporate sectors. Skilled in React Native, Node.js, Java, and Python. Expertise in microservices, ETL projects, AWS, and Oracle Cloud. Recognized for delivering high-quality, scalable solutions and continuously adopting new technologies. Oracle Cloud Infrastructure Certified.",
     "contactmessage": "Get in touch with me to collaborate with you!",
     "email": "areyes.088@gmail.com",
-    "phone": "",
+    "phone": "+56 9 4268 4500",
     "address": {
       "street": "Monjitas 744",
       "city": "Santiago",
-      "state": "R. M",
+      "state": "Chile",
       "zip": ""
     },
     "website": "",
@@ -35,69 +35,51 @@
     ]
   },
   "resume": {
-    "skillmessage": "My Programming Language Proficiency",
     "education": [
       {
-        "school": "Instituto Duoc Uc",
-        "degree": "Analista Programador",
+        "school": "Universidad Autónoma de Chile",
+        "degree": "B.S. in Computer Engineering",
+        "graduated": "In progress (2nd year)",
+        "description": ""
+      },
+      {
+        "school": "Duoc UC",
+        "degree": "Associate Degree, Computer Programming",
         "graduated": "2019",
         "description": ""
       }
     ],
     "work": [
       {
-        "company": "Andes - Tech",
+        "company": "Banco de Chile",
+        "title": "Senior Software Developer",
+        "years": "May 2024 – Present",
+        "description": "Participated in the complete migration of Mi Pago to Mi Banco app, improving performance and user experience. Technologies: React Native, Jenkins, Java, BFF. Santiago, Chile (Hybrid)."
+      },
+      {
+        "company": "Banco Ripley",
+        "title": "Full-Stack Developer",
+        "years": "Aug 2021 – Jan 2024",
+        "description": "Built microservices with Node.js and Express to enhance transactional flows (balances, account statements, credits). Optimized queries using MongoDB and Redis caching. Developed AWS Lambda serverless functions and managed APIs via AWS API Gateway. Deployed ETL pipelines with Python, PostgreSQL, Docker; integrated data from SQL, CSV, and REST APIs, applying data cleaning and normalization with Pandas and NumPy. Santiago, Chile."
+      },
+      {
+        "company": "Andes Technology",
         "title": "Software Developer",
-        "years": "March 2019 - Present",
-        "description": "Junior software developer , i have created  movile applications in android. Also, i give support to plataform AMS website , all this with ObjectScript language in backend."
+        "years": "Mar 2019 – Jul 2021",
+        "description": "Developed React Native mobile app for high-voltage tower inspections using Android PDA devices. Built Android inventory management app for Merk, with SQLite DB and SOAP API integration. Santiago, Chile."
       }
     ],
-    "skills": [
+    "certifications": [
       {
-        "name": "ReactJs",
-        "level": "70%"
-      },
-      {
-        "name": "Python",
-        "level": "50%"
-      },
-      {
-        "name": "Git",
-        "level": "80%"
-      },
-      {
-        "name": "JavaScript",
-        "level": "80%"
-      },
-      {
-        "name": "Web Development",
-        "level": "70%"
-      },
-      {
-        "name": "Java",
-        "level": "80%"
-      },
-      {
-        "name": "Mobile Development",
-        "level": "90%"
+        "name": "Oracle Cloud Infrastructure 2024 Certified Foundations Associate",
+        "issuer": "Oracle",
+        "date": "Aug 2024"
       }
     ]
   },
   "portfolio": {
-    "projects": [
-      {
-        "title": "En construcción",
-        "category": "",
-        "image": "",
-        "url": ""
-      },
-      {
-        "title": "En construcción",
-        "category": "",
-        "image": "",
-        "url": ""
-      }
-    ]
+    "projects": [],
+    "githubUsername": "areyesfig"
   },
   "testimonials": {
     "testimonials": [

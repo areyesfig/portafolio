@@ -1,0 +1,1 @@
+export { fetchResumeData } from "./resumeDataService";

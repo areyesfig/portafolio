@@ -1,29 +1,20 @@
 import React from "react";
+import PropTypes from "prop-types";
+import ProjectCard from "./portfolio/ProjectCard";
+import { useGitHubRepos } from "../hooks";
 
 const Portfolio = ({ data }) => {
-  if (data) {
-    var projects = data.projects.map(function (projects) {
-      var projectImage = "images/portfolio/" + projects.image;
-      return (
-        <div key={projects.title} className="columns portfolio-item">
-          <div className="item-wrap">
-            <a href={projects.url} title={projects.title}>
-              <img alt={projects.title} src={projectImage} />
-              <div className="overlay">
-                <div className="portfolio-item-meta">
-                  <h5>{projects.title}</h5>
-                  <p>{projects.category}</p>
-                </div>
-              </div>
-              <div className="link-icon">
-                <i className="fa fa-link"></i>
-              </div>
-            </a>
-          </div>
-        </div>
-      );
-    });
-  }
+  const githubUsername = data?.githubUsername;
+  const manualProjects =
+    data?.projects?.filter((p) => p.url && p.url.trim() !== "") || [];
+
+  const { repos: githubProjects, loading, error } = useGitHubRepos(
+    githubUsername,
+    9
+  );
+
+  const allProjects = [...manualProjects, ...githubProjects];
+  const hasProjects = allProjects.length > 0 || loading;
 
   return (
     <section id="portfolio">
@@ -31,16 +22,59 @@ const Portfolio = ({ data }) => {
         <div className="twelve columns collapsed">
           <h1>Check Out Some of My Works.</h1>
 
+          {error && (
+            <p className="portfolio-error">
+              {error}. Puedes agregar proyectos manualmente en{" "}
+              <code>resumeData.json</code>.
+            </p>
+          )}
+
+          {loading && (
+            <div className="portfolio-loading">
+              <div className="portfolio-spinner" />
+              <p>Cargando proyectos desde GitHub...</p>
+            </div>
+          )}
+
           <div
             id="portfolio-wrapper"
-            className="bgrid-quarters s-bgrid-thirds cf"
+            className="repo-grid"
+            style={{ opacity: loading ? 0.5 : 1 }}
           >
-           {projects}
+            {allProjects.map((project, index) => (
+              <ProjectCard
+                key={`${project.title}-${index}`}
+                project={project}
+                isFromGitHub={
+                  !!githubUsername && index >= manualProjects.length
+                }
+              />
+            ))}
           </div>
+
+          {!hasProjects && !loading && (
+            <p className="portfolio-empty">
+              Agrega <code>githubUsername: &quot;tu-usuario&quot;</code> en la
+              sección portfolio de <code>resumeData.json</code> para mostrar tus
+              repos de GitHub automáticamente.
+            </p>
+          )}
         </div>
       </div>
     </section>
   );
+};
+
+Portfolio.propTypes = {
+  data: PropTypes.shape({
+    githubUsername: PropTypes.string,
+    projects: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        url: PropTypes.string,
+      })
+    ),
+  }),
 };
 
 export default Portfolio;

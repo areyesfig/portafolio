@@ -1,8 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Resume = ({ data }) => {
   if (data) {
-    var skillmessage = data.skillmessage;
     var education = data.education.map(function (education) {
       return (
         <div key={education.school}>
@@ -27,13 +27,19 @@ const Resume = ({ data }) => {
         </div>
       );
     });
-    var skills = data.skills.map(function (skills) {
-      var className = "bar-expand " + skills.name.toLowerCase();
+    var certifications = data.certifications?.map(function (cert) {
       return (
-        <li key={skills.name}>
-          <span style={{ width: skills.level }} className={className}></span>
-          <em>{skills.name}</em>
-        </li>
+        <div key={cert.name} className="certification-item">
+          <h3>{cert.name}</h3>
+          <p className="info">
+            {cert.issuer}
+            {cert.date && (
+              <>
+                <span>&bull;</span> <em className="date">{cert.date}</em>
+              </>
+            )}
+          </p>
+        </div>
       );
     });
   }
@@ -54,6 +60,22 @@ const Resume = ({ data }) => {
         </div>
       </div>
 
+      {certifications?.length > 0 && (
+        <div className="row certifications">
+          <div className="three columns header-col">
+            <h1>
+              <span>Certifications</span>
+            </h1>
+          </div>
+
+          <div className="nine columns main-col">
+            <div className="row item">
+              <div className="twelve columns">{certifications}</div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="row work">
         <div className="three columns header-col">
           <h1>
@@ -63,24 +85,16 @@ const Resume = ({ data }) => {
 
         <div className="nine columns main-col">{work}</div>
       </div>
-
-      <div className="row skill">
-        <div className="three columns header-col">
-          <h1>
-            <span>Skills</span>
-          </h1>
-        </div>
-
-        <div className="nine columns main-col">
-          <p>{skillmessage}</p>
-
-          <div className="bars">
-            <ul className="skills">{skills}</ul>
-          </div>
-        </div>
-      </div>
     </section>
   );
+};
+
+Resume.propTypes = {
+  data: PropTypes.shape({
+    education: PropTypes.array,
+    work: PropTypes.array,
+    certifications: PropTypes.array,
+  }),
 };
 
 export default Resume;

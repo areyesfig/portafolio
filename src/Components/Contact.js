@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 const Contact = ({ data }) => {
   const [name, setName] = useState("");
@@ -17,7 +18,8 @@ const Contact = ({ data }) => {
     var contactMessage = data.contactmessage;
   }
 
-  const submitForm = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     window.open(
       `mailto:${contactEmail}?subject=${encodeURIComponent(
         subject
@@ -43,7 +45,7 @@ const Contact = ({ data }) => {
 
       <div className="row">
         <div className="eight columns">
-          <form onSubmit={submitForm}>
+          <form onSubmit={handleSubmit}>
             <fieldset>
               <div>
                 <label htmlFor="contactName">
@@ -51,7 +53,6 @@ const Contact = ({ data }) => {
                 </label>
                 <input
                   type="text"
-                  defaultValue=""
                   value={name}
                   size="35"
                   id="contactName"
@@ -65,8 +66,7 @@ const Contact = ({ data }) => {
                   Email <span className="required">*</span>
                 </label>
                 <input
-                  type="text"
-                  defaultValue=""
+                  type="email"
                   value={email}
                   size="35"
                   id="contactEmail"
@@ -79,7 +79,6 @@ const Contact = ({ data }) => {
                 <label htmlFor="contactSubject">Subject</label>
                 <input
                   type="text"
-                  defaultValue=""
                   value={subject}
                   size="35"
                   id="contactSubject"
@@ -103,15 +102,15 @@ const Contact = ({ data }) => {
               </div>
 
               <div>
-                <button onClick={submitForm} type="submit" className="submit">
+                <button type="submit" className="submit">
                   Submit
                 </button>
               </div>
             </fieldset>
           </form>
 
-          <div id="message-warning"> Error boy</div>
-          <div id="message-success">
+          <div id="message-warning" style={{ display: "none" }} />
+          <div id="message-success" style={{ display: "none" }}>
             <i className="fa fa-check"></i>Your message was sent, thank you!
             <br />
           </div>
@@ -136,6 +135,21 @@ const Contact = ({ data }) => {
       </div>
     </section>
   );
+};
+
+Contact.propTypes = {
+  data: PropTypes.shape({
+    name: PropTypes.string,
+    email: PropTypes.string,
+    phone: PropTypes.string,
+    contactmessage: PropTypes.string,
+    address: PropTypes.shape({
+      street: PropTypes.string,
+      city: PropTypes.string,
+      state: PropTypes.string,
+      zip: PropTypes.string,
+    }),
+  }),
 };
 
 export default Contact;
